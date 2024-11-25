@@ -1,0 +1,18 @@
+{
+    "sourceFile": "server.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1731164509804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1731164509804,
+            "name": "Commit-0",
+            "content": "const express = require('express');\r\nconst cors = require('cors');\r\nconst nodemailer = require('nodemailer');\r\n\r\nconst app = express();\r\napp.use(cors()); // Izinkan CORS\r\napp.use(express.json()); // Untuk parsing application/json\r\napp.use(express.urlencoded({ extended: true })); // Untuk parsing application/x-www-form-urlencoded\r\n\r\n// Rute untuk mengirim email\r\napp.post('/send-email', (req, res) => {\r\n    const { name, email, subject, text } = req.body;\r\n\r\n    const transporter = nodemailer.createTransport({\r\n        service: 'gmail',\r\n        auth: {\r\n            user: 'heribangkal21@gmail.com', // Ganti dengan alamat email Anda\r\n            pass: 'Herie$21' // Ganti dengan password email Anda\r\n        }\r\n    });\r\n\r\n    const mailOptions = {\r\n        from: email, // Email pengirim diambil dari formulir\r\n        to: 'heribangkal21@gmail.com', // Ganti dengan alamat email Anda\r\n        subject: subject,\r\n        text: `Name: ${name}\\nEmail: ${email}\\nMessage: ${text}`\r\n    };\r\n\r\n    transporter.sendMail(mailOptions, (error, info) => {\r\n        if (error) {\r\n            return res.status(500).send(error.toString());\r\n        }\r\n        res.status(200).send('Email sent: ' + info.response);\r\n    });\r\n});\r\n\r\napp.listen(3000, () => {\r\n    console.log('Server running on http://localhost:3000');\r\n});"
+        }
+    ]
+}

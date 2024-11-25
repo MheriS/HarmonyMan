@@ -1,0 +1,26 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1731164436593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1731167204693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,19 @@\n {\n   \"name\": \"personalweb\",\n   \"version\": \"1.0.0\",\n-  \"description\": \"\",\n-  \"main\": \"kirimemail.js\",\n+  \"description\": \"A simple web application to send emails using Nodemailer.\",\n+  \"main\": \"server.js\",\n   \"scripts\": {\n-    \"test\": \"sendEmail.js\"\n+    \"start\": \"node server.js\",\n+    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n-  \"keywords\": [],\n-  \"author\": \"\",\n+  \"keywords\": [\"email\", \"nodemailer\", \"express\", \"web\"],\n+  \"author\": \"Nama Anda\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"body-parser\": \"^1.20.3\",\n     \"express\": \"^4.21.1\",\n-    \"nodemailer\": \"^6.9.16\"\n+    \"nodemailer\": \"^6.9.16\",\n+    \"cors\": \"^2.8.5\"\n   }\n-}\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1731167219049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"start\": \"node server.js\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n   \"keywords\": [\"email\", \"nodemailer\", \"express\", \"web\"],\n-  \"author\": \"Nama Anda\",\n+  \"author\": \"Moh. Heri Susanto\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"body-parser\": \"^1.20.3\",\n     \"express\": \"^4.21.1\",\n"
+                }
+            ],
+            "date": 1731164436593,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"personalweb\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"kirimemail.js\",\n  \"scripts\": {\n    \"test\": \"sendEmail.js\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {\n    \"body-parser\": \"^1.20.3\",\n    \"express\": \"^4.21.1\",\n    \"nodemailer\": \"^6.9.16\"\n  }\n}\n"
+        }
+    ]
+}

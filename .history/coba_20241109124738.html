@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* Styling untuk project tile */
+        .project-tile {
+            position: relative;
+            width: 200px;
+            margin: 20px;
+        }
+        
+        /* Overlay styling */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-tile:hover .overlay {
+            opacity: 1;
+        }
+        
+        /* Modal styling */
+        .modal {
+            display: none; /* Tersembunyi secara default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Konten modal */
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Tombol tutup */
+        .close-btn {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="project-tile">
+    <img src="https://i.ibb.co/kXvSQ7Y/Kalsifikasi-Penyakit-Padi.png" alt="Klasifikasi Penyakit Padi" border="0">
+    <div class="overlay"> 
+        <div class="project-description">
+            <h3 onclick="showModal(this)">Project 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nisi aperiam voluptate accusamus velit omnis.
+            </p>
+        </div>
+    </div>
+    <!-- Modal untuk tiap project-tile -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal(this)">&times;</span>
+            <h2>Project 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nisi aperiam voluptate accusamus velit omnis.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showModal(element) {
+        // Cari elemen modal di dalam .project-tile saat h3 diklik
+        const modal = element.closest('.project-tile').querySelector('.modal');
+        modal.style.display = 'flex';
+    }
+
+    function closeModal(element) {
+        // Menutup modal ketika tombol close diklik
+        const modal = element.closest('.modal');
+        modal.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "sendEmail.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1731162406595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1731162853082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     const transporter = nodemailer.createTransport({\r\n         service: 'gmail',\r\n         auth: {\r\n             user: 'heribangkal21@gmail.com', // Ganti dengan alamat email Anda\r\n-            pass: 'your-email-password' // Ganti dengan password email Anda\r\n+            pass: 'Herie$21' // Ganti dengan password email Anda\r\n         }\r\n     });\r\n \r\n     const mailOptions = {\r\n"
+                },
+                {
+                    "date": 1731164436601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,13 @@\n const express = require('express');\r\n+const cors = require('cors');\r\n const nodemailer = require('nodemailer');\r\n-const bodyParser = require('body-parser');\r\n \r\n const app = express();\r\n-const port = 3000;\r\n+app.use(cors()); // Izinkan CORS\r\n+app.use(express.json()); // Untuk parsing application/json\r\n+app.use(express.urlencoded({ extended: true })); // Untuk parsing application/x-www-form-urlencoded\r\n \r\n-// Middleware\r\n-app.use(bodyParser.urlencoded({ extended: true }));\r\n-\r\n-// Rute untuk menampilkan formulir (jika Anda ingin menampilkannya di localhost)\r\n-app.get('/', (req, res) => {\r\n-    res.sendFile(__dirname + '/index.html'); // Ganti dengan path ke file HTML Anda\r\n-});\r\n-\r\n // Rute untuk mengirim email\r\n app.post('/send-email', (req, res) => {\r\n     const { name, email, subject, text } = req.body;\r\n \r\n@@ -25,22 +19,21 @@\n         }\r\n     });\r\n \r\n     const mailOptions = {\r\n-        from: email,\r\n-        to: 'your-email@gmail.com', // Ganti dengan alamat email penerima\r\n+        from: email, // Email pengirim diambil dari formulir\r\n+        to: 'heribangkal21@gmail.com', // Ganti dengan alamat email Anda\r\n         subject: subject,\r\n         text: `Name: ${name}\\nEmail: ${email}\\nMessage: ${text}`\r\n     };\r\n \r\n     transporter.sendMail(mailOptions, (error, info) => {\r\n         if (error) {\r\n-            return res.send('Error occurred: ' + error.message);\r\n+            return res.status(500).send(error.toString());\r\n         }\r\n-        res.send('Email sent: ' + info.response);\r\n+        res.status(200).send('Email sent: ' + info.response);\r\n     });\r\n });\r\n \r\n-// Jalankan server\r\n-app.listen(port, () => {\r\n-    console.log(`Server is running at http://localhost:${port}`);\r\n+app.listen(3000, () => {\r\n+    console.log('Server running on http://localhost:3000');\r\n });\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1731162406595,
+            "name": "Commit-0",
+            "content": "const express = require('express');\r\nconst nodemailer = require('nodemailer');\r\nconst bodyParser = require('body-parser');\r\n\r\nconst app = express();\r\nconst port = 3000;\r\n\r\n// Middleware\r\napp.use(bodyParser.urlencoded({ extended: true }));\r\n\r\n// Rute untuk menampilkan formulir (jika Anda ingin menampilkannya di localhost)\r\napp.get('/', (req, res) => {\r\n    res.sendFile(__dirname + '/index.html'); // Ganti dengan path ke file HTML Anda\r\n});\r\n\r\n// Rute untuk mengirim email\r\napp.post('/send-email', (req, res) => {\r\n    const { name, email, subject, text } = req.body;\r\n\r\n    const transporter = nodemailer.createTransport({\r\n        service: 'gmail',\r\n        auth: {\r\n            user: 'heribangkal21@gmail.com', // Ganti dengan alamat email Anda\r\n            pass: 'your-email-password' // Ganti dengan password email Anda\r\n        }\r\n    });\r\n\r\n    const mailOptions = {\r\n        from: email,\r\n        to: 'your-email@gmail.com', // Ganti dengan alamat email penerima\r\n        subject: subject,\r\n        text: `Name: ${name}\\nEmail: ${email}\\nMessage: ${text}`\r\n    };\r\n\r\n    transporter.sendMail(mailOptions, (error, info) => {\r\n        if (error) {\r\n            return res.send('Error occurred: ' + error.message);\r\n        }\r\n        res.send('Email sent: ' + info.response);\r\n    });\r\n});\r\n\r\n// Jalankan server\r\napp.listen(port, () => {\r\n    console.log(`Server is running at http://localhost:${port}`);\r\n});"
+        }
+    ]
+}

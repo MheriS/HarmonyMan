@@ -1,0 +1,26 @@
+{
+    "sourceFile": "send_email.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1731153547115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1731153681730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n <?php\r\n+// Aktifkan pelaporan kesalahan\r\n+error_reporting(E_ALL); // Mengatur pelaporan untuk semua jenis kesalahan\r\n+ini_set('display_errors', 1); // Menampilkan kesalahan di browser\r\n+\r\n if ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\r\n     $name = $_POST['name'];\r\n     $email = $_POST['email'];\r\n     $subject = $_POST['subject'];\r\n"
+                },
+                {
+                    "date": 1731160643276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     $email = $_POST['email'];\r\n     $subject = $_POST['subject'];\r\n     $message = $_POST['text'];\r\n \r\n-    $to = \"your-email@gmail.com\"; // Ganti dengan email Anda\r\n+    $to = \"heribangkal21@gmail.com\"; // Ganti dengan email Anda\r\n     $headers = \"From: $email\" . \"\\r\\n\" .\r\n                \"Reply-To: $email\" . \"\\r\\n\";\r\n \r\n     $body = \"Name: $name\\nEmail: $email\\nSubject: $subject\\nMessage: $message\";\r\n"
+                }
+            ],
+            "date": 1731153547115,
+            "name": "Commit-0",
+            "content": "<?php\r\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\r\n    $name = $_POST['name'];\r\n    $email = $_POST['email'];\r\n    $subject = $_POST['subject'];\r\n    $message = $_POST['text'];\r\n\r\n    $to = \"your-email@gmail.com\"; // Ganti dengan email Anda\r\n    $headers = \"From: $email\" . \"\\r\\n\" .\r\n               \"Reply-To: $email\" . \"\\r\\n\";\r\n\r\n    $body = \"Name: $name\\nEmail: $email\\nSubject: $subject\\nMessage: $message\";\r\n\r\n    if (mail($to, $subject, $body, $headers)) {\r\n        echo \"Email sent successfully!\";\r\n    } else {\r\n        echo \"Email sending failed.\";\r\n    }\r\n}\r\n?>"
+        }
+    ]
+}

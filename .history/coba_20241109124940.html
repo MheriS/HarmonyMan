@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Album</title>
+    <style>
+        /* Project tile styling */
+        .project-tile {
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-tile:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .close-btn, .prev-btn, .next-btn {
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .close-btn {
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+
+        img.modal-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Thumbnail gallery -->
+<div class="project-tile">
+    <img src="https://i.ibb.co/kXvSQ7Y/Kalsifikasi-Penyakit-Padi.png" alt="Project Image" onclick="openModal(0)">
+    <div class="overlay">
+        <h3 onclick="openModal(0)">Project 1</h3>
+    </div>
+</div>
+
+<div class="project-tile">
+    <img src="https://i.ibb.co/kXvSQ7Y/Kalsifikasi-Penyakit-Padi.png" alt="Project Image" onclick="openModal(1)">
+    <div class="overlay">
+        <h3 onclick="openModal(1)">Project 2</h3>
+    </div>
+</div>
+
+<!-- Modal for album gallery -->
+<div id="albumModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <span class="prev-btn" onclick="changeSlide(-1)">&#10094;</span>
+        <span class="next-btn" onclick="changeSlide(1)">&#10095;</span>
+        <img id="modalImage" class="modal-image" src="" alt="Album Image">
+        <p id="caption"></p>
+    </div>
+</div>
+
+<script>
+    // Data array for images and captions
+    const images = [
+        { src: "https://i.ibb.co/kXvSQ7Y/Kalsifikasi-Penyakit-Padi.png", caption: "Project 1" },
+        { src: "https://i.ibb.co/kXvSQ7Y/Kalsifikasi-Penyakit-Padi.png", caption: "Project 2" }
+    ];
+
+    let currentSlide = 0;
+
+    function openModal(index) {
+        currentSlide = index;
+        document.getElementById("albumModal").style.display = "flex";
+        showSlide(currentSlide);
+    }
+
+    function closeModal() {
+        document.getElementById("albumModal").style.display = "none";
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide >= images.length) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = images.length - 1;
+        showSlide(currentSlide);
+    }
+
+    function showSlide(index) {
+        const imageElement = document.getElementById("modalImage");
+        const captionElement = document.getElementById("caption");
+        imageElement.src = images[index].src;
+        captionElement.textContent = images[index].caption;
+    }
+</script>
+
+</body>
+</html>
