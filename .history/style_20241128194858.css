@@ -73,7 +73,6 @@ h2 {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -338,8 +337,7 @@ body {
 
 /* Skill section styling */
 .skills {
-  display: flexbox;
-  flex-wrap: wrap; /* Membungkus elemen ke baris baru */
+  display: inline-block;
   width: 100%;
   min-width: 700px;
   max-width: 700px;
@@ -451,10 +449,7 @@ body {
   .content-card {
     height: auto; /* Menyesuaikan tinggi */
     max-height: 300px;
-  }
-
-  .skill {
-    flex: 0 1 calc(50% - 10px); /* Mengatur 2 kolom pada layar tablet */
+    flex: 1 1 calc(50% - 20px); /* 2 kolom pada layar lebih kecil */
   }
 }
 
@@ -839,7 +834,6 @@ textarea {
   .container {
     height: auto;
     flex-direction: column;
-    flex-wrap: wrap;
   }
   .portfolio {
     flex-direction: column;
@@ -856,6 +850,7 @@ textarea {
   .content-card {
     padding: 100px 0 0;
     height: auto;
+    max-height: 300px;
   }
   .menu {
     display: flex; /* Mengatur menu menjadi flexbox */
@@ -913,15 +908,7 @@ textarea {
   .content-card {
     height: auto; /* mengatur tinggi secara otomatis */
     max-height: 300px;
-  }
-
-  .skills {
-    justify-content: center;
-  }
-
-  .skill {
-    flex: 1 1 45%;  /* 2 items per row on small screens */
-    max-width: 45%;  /* Adjust max width for smaller screens */
+    max-width: 500px;  /* Membatasi lebar card maksimum */
   }
 }
 
@@ -934,10 +921,6 @@ textarea {
   .home h1 {
     font-size: 2rem;
     line-height: 2.5rem;
-  }
-  .skill {
-    flex: 0 1 90%; /* Menjadikan setiap elemen skill satu kolom pada layar ponsel */
-    max-width: 90%;
   }
 }
 

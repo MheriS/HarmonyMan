@@ -338,7 +338,7 @@ body {
 
 /* Skill section styling */
 .skills {
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap; /* Membungkus elemen ke baris baru */
   width: 100%;
   min-width: 700px;
@@ -914,15 +914,6 @@ textarea {
     height: auto; /* mengatur tinggi secara otomatis */
     max-height: 300px;
   }
-
-  .skills {
-    justify-content: center;
-  }
-
-  .skill {
-    flex: 1 1 45%;  /* 2 items per row on small screens */
-    max-width: 45%;  /* Adjust max width for smaller screens */
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -936,8 +927,7 @@ textarea {
     line-height: 2.5rem;
   }
   .skill {
-    flex: 0 1 90%; /* Menjadikan setiap elemen skill satu kolom pada layar ponsel */
-    max-width: 90%;
+    flex: 0 1 100%; /* Menjadikan setiap elemen skill satu kolom pada layar ponsel */
   }
 }
 
