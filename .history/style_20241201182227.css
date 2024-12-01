@@ -78,45 +78,6 @@ h2 {
   height: 100vh;
 }
 
-/*=============== CONTACT INFO ===============*/
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Pastikan body memiliki minimal tinggi viewport */
-}
-
-#content {
-  flex: 1; /* Memungkinkan konten untuk mengambil ruang yang tersisa */
-}
-
-#contact-info {
-  text-align: center;
-  padding: 20px; /* Padding yang cukup untuk kenyamanan */
-  background-color: #f1f1f1; /* Warna latar belakang */
-  border-top: 1px solid #ddd; /* Tambahkan garis atas untuk pemisahan */
-  font-size: 1em; /* Ukuran font default */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  #contact-info {
-    font-size: 0.9em; /* Kurangi ukuran font pada layar lebih kecil */
-    padding: 15px; /* Kurangi padding */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #contact-info {
-    font-size: 0.85em; /* Ukuran font lebih kecil untuk layar sangat kecil */
-    padding: 10px; /* Kurangi padding lebih jauh */
-  }
-}
-
-
 /*=============== MENU ===============*/
 
 .menu {
@@ -692,71 +653,6 @@ img.modal-image {
 .timeline-item {
   margin: 50px 0;
 }
-
-/*=============== SERTIFIKAT ===============*/
-
-.sertifikat-container {
-  display: flex; /* Menggunakan flexbox */
-  flex-wrap: wrap; /* Membungkus item ke baris berikutnya */
-  justify-content: space-between; /* Menyebar item secara merata */
-  gap: 15px; /* Jarak antar item */
-  padding: 10px; /* Padding untuk kontainer */
-}
-
-.sertifikat-item {
-  background-color: #ffffff; /* Warna latar belakang item sertifikat */
-  border: 1px solid #ddd; /* Garis batas */
-  border-radius: 5px; /* Sudut melengkung */
-  padding: 20px; /* Padding untuk item */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
-  flex: 1 1 calc(30% - 20px); /* Ukuran fleksibel, 3 item per baris dengan margin */
-  min-width: 200px; /* Lebar minimum untuk memastikan fleksibilitas */
-  max-width: 650px; /* Lebar maksimum untuk item */
-  height: auto; /* Tinggi fleksibel agar isi tidak terpotong */
-  display: flex; /* Menggunakan flexbox di dalam item */
-  flex-direction: column; /* Mengatur arah konten vertikal */
-  justify-content: space-between; /* Menyebar konten di dalam item */
-  margin: 0 auto; /* Pusatkan item secara horizontal */
-}
-
-.sertifikat-item h3 {
-  color: #534029; /* Warna teks untuk nama sertifikat */
-  font-size: 1.2em; /* Ukuran font untuk judul */
-  margin-bottom: 10px; /* Jarak bawah judul */
-}
-
-.sertifikat-item p {
-  color: #555; /* Warna teks untuk deskripsi */
-  font-size: 0.9em; /* Ukuran font untuk deskripsi */
-  margin-top: 5px; /* Jarak atas deskripsi */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .sertifikat-item {
-    flex: 1 1 calc(45% - 20px); /* 2 item per baris pada tablet */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sertifikat-item {
-    flex: 1 1 calc(100% - 20px); /* 1 item per baris pada layar kecil */
-    padding: 15px; /* Kurangi padding */
-  }
-
-  .sertifikat-container {
-    gap: 10px; /* Kurangi jarak antar item */
-  }
-
-  .sertifikat-item h3 {
-    font-size: 1.1em; /* Kurangi ukuran font judul */
-  }
-
-  .sertifikat-item p {
-    font-size: 0.85em; /* Kurangi ukuran font deskripsi */
-  }
-}
-
 
 /*=============== FORM ===============*/
 

@@ -78,45 +78,6 @@ h2 {
   height: 100vh;
 }
 
-/*=============== CONTACT INFO ===============*/
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Pastikan body memiliki minimal tinggi viewport */
-}
-
-#content {
-  flex: 1; /* Memungkinkan konten untuk mengambil ruang yang tersisa */
-}
-
-#contact-info {
-  text-align: center;
-  padding: 20px; /* Padding yang cukup untuk kenyamanan */
-  background-color: #f1f1f1; /* Warna latar belakang */
-  border-top: 1px solid #ddd; /* Tambahkan garis atas untuk pemisahan */
-  font-size: 1em; /* Ukuran font default */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  #contact-info {
-    font-size: 0.9em; /* Kurangi ukuran font pada layar lebih kecil */
-    padding: 15px; /* Kurangi padding */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #contact-info {
-    font-size: 0.85em; /* Ukuran font lebih kecil untuk layar sangat kecil */
-    padding: 10px; /* Kurangi padding lebih jauh */
-  }
-}
-
-
 /*=============== MENU ===============*/
 
 .menu {
@@ -306,31 +267,12 @@ body {
   margin: 0.5rem 0;
 }
 
-
-/* Bahasa */
 .language {
   margin-bottom: 15px;
 }
 
 .language p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.indonesian {
-  width: 100%;  /* Adjust the width as needed */
-  background-color: #534029FF !important;
-}
-
-.english {
-  width: 60%;   /* Adjust the width as needed */
-  background-color: #534029FF !important; /* Custom color for English */
-}
-
-.madura {
-  width: 100%;   /* Adjust the width as needed */
-  background-color: #534029FF !important;
+  margin: 0;
 }
 
 .bar {
@@ -410,7 +352,7 @@ body {
 }
 
 .overlay {
-  background: #583C4487;
+  background: #a8858fe0;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -421,238 +363,26 @@ body {
   transition: 0.5s ease;
 }
 
-/* Deskripsi proyek */
 .project-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  text-align: center;
   line-height: normal;
-  max-width: 250px;
+  max-width: 200px;
   margin: 20px;
   position: absolute;
-  left: 50%; /* Menempatkan deskripsi di tengah secara horizontal */
-  transform: translateX(-50%); /* Mengoreksi posisi agar tepat di tengah */
-  background-color: rgba(0, 0, 0, 0.6); /* Menambahkan latar belakang semi-transparan untuk teks */
-  color: white;
-  opacity: 0; /* Mulai tersembunyi */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Menambahkan transisi halus */
-}
-
-.project-tile:hover .project-description {
-  opacity: 1; /* Menampilkan deskripsi saat hover */
-  transform: translateX(-50%, -50%) translateY(0%); /* Sedikit mengangkat deskripsi */
-  padding: 10px; /* Menambah ruang di sekitar teks saat hover */
-  width: 90%; /* Lebar deskripsi saat hover */
-}
-
-/* Teks deskripsi */
-.project-description p {
-  font-size: 1.1em; /* Ukuran teks default */
-  line-height: 1.0; /* Spasi antar baris */
-  color: #fff;
-  font-family: Arial, sans-serif;
-  transition: font-size 0.3s ease-in-out; /* Animasi perubahan ukuran font */
-}
-
-.project-tile:hover .project-description p {
-  font-size: 1.0em; /* Ukuran font lebih besar saat hover */
-  text-align: justify; /* Meratakan teks ke kiri dan kanan */
-  hyphens: auto; /* Menambahkan pemenggalan otomatis pada kata panjang */
-  /* word-spacing: 2px; Mengatur jarak antar kata */
-  /* text-justify: inter-word; Menjaga jarak antar kata agar tidak terlalu jauh */
-  /* word-spacing: normal; Mengatur jarak antar kata */
+  left: -250px;
+  transition: 0.5s ease;
 }
 
 .project-tile:hover .overlay {
   width: 100%;
   cursor: pointer;
-  opacity: 1;
   transition: 0.5s ease;
 }
 
-/* Styling untuk modal ketika di klik*/
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
+.project-tile:hover .project-description {
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan untuk modal */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* Konten modal */
-.modal-content {
-  position: relative;
-  background-color: #fff;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.close-btn, .prev-btn, .next-btn {
-  font-size: 24px;
-  color: #333;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  transition: 0.5s ease;
 }
-
-.close-btn {
-  top: 10px;
-  right: 20px;
-  font-size: 30px;
-  color: #fff;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-/* Gambar modal */
-img.modal-image {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-}
-
-
-/*=============== EDUCATION SECTION ===============*/
-#education {
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-#education h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.education-item {
-  background: #ffffff;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Default to 100% */
-  max-width: 650px; /* Maximum width */
-  box-sizing: border-box; /* Include padding in width */
-  margin: 10px auto; /* Center horizontally */
-}
-
-.education-item h3 {
-  margin: 0;
-  color: #534029FF;
-}
-
-.education-item p {
-  margin: 5px 0;
-  color: #555;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .education-item {
-    padding: 10px; /* Reduce padding on smaller screens */
-  }
-
-  #education h1 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .education-item {
-    padding: 8px; /* Further reduce padding */
-  }
-
-  #education h1 {
-    font-size: 1.25rem; /* Smaller font size for very small screens */
-  }
-}
-
-
-/*=============== LEADERSHIP SECTION ===============*/
-
-/* Gaya untuk setiap item kepemimpinan */
-.leadership-item {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  width: 100%; /* Lebar default fleksibel */
-  max-width: 600px; /* Maksimum lebar */
-  box-sizing: border-box; /* Sertakan padding dalam ukuran */
-  margin: 10px auto; /* Center horizontally */
-}
-
-/* Gaya untuk judul item kepemimpinan */
-.leadership-item h3 {
-  font-size: 20px; /* Ukuran font untuk desktop */
-  color: #534029FF; /* Warna biru untuk judul */
-}
-
-/* Gaya untuk deskripsi dan periode */
-.leadership-item p {
-  margin: 5px 0;
-  color: #555; /* Warna abu-abu untuk teks */
-  font-size: 16px; /* Ukuran font untuk desktop */
-}
-
-/* Ikon untuk aktivitas kepemimpinan */
-.leadership-item i {
-  margin-right: 10px; /* Jarak antara ikon dan teks */
-  color: #534029FF; /* Warna ikon */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .leadership-item {
-    padding: 10px; /* Kurangi padding untuk layar lebih kecil */
-  }
-
-  .leadership-item h3 {
-    font-size: 18px; /* Kurangi ukuran font */
-  }
-
-  .leadership-item p {
-    font-size: 14px; /* Kurangi ukuran font */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .leadership-item {
-    padding: 8px; /* Lebih kecilkan padding */
-  }
-
-  .leadership-item h3 {
-    font-size: 16px; /* Ukuran lebih kecil untuk layar sangat kecil */
-  }
-
-  .leadership-item p {
-    font-size: 13px; /* Ukuran teks deskripsi lebih kecil */
-  }
-}
-
 
 /*=============== EXPERIENCE SECTION ===============*/
 
@@ -692,71 +422,6 @@ img.modal-image {
 .timeline-item {
   margin: 50px 0;
 }
-
-/*=============== SERTIFIKAT ===============*/
-
-.sertifikat-container {
-  display: flex; /* Menggunakan flexbox */
-  flex-wrap: wrap; /* Membungkus item ke baris berikutnya */
-  justify-content: space-between; /* Menyebar item secara merata */
-  gap: 15px; /* Jarak antar item */
-  padding: 10px; /* Padding untuk kontainer */
-}
-
-.sertifikat-item {
-  background-color: #ffffff; /* Warna latar belakang item sertifikat */
-  border: 1px solid #ddd; /* Garis batas */
-  border-radius: 5px; /* Sudut melengkung */
-  padding: 20px; /* Padding untuk item */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
-  flex: 1 1 calc(30% - 20px); /* Ukuran fleksibel, 3 item per baris dengan margin */
-  min-width: 200px; /* Lebar minimum untuk memastikan fleksibilitas */
-  max-width: 650px; /* Lebar maksimum untuk item */
-  height: auto; /* Tinggi fleksibel agar isi tidak terpotong */
-  display: flex; /* Menggunakan flexbox di dalam item */
-  flex-direction: column; /* Mengatur arah konten vertikal */
-  justify-content: space-between; /* Menyebar konten di dalam item */
-  margin: 0 auto; /* Pusatkan item secara horizontal */
-}
-
-.sertifikat-item h3 {
-  color: #534029; /* Warna teks untuk nama sertifikat */
-  font-size: 1.2em; /* Ukuran font untuk judul */
-  margin-bottom: 10px; /* Jarak bawah judul */
-}
-
-.sertifikat-item p {
-  color: #555; /* Warna teks untuk deskripsi */
-  font-size: 0.9em; /* Ukuran font untuk deskripsi */
-  margin-top: 5px; /* Jarak atas deskripsi */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .sertifikat-item {
-    flex: 1 1 calc(45% - 20px); /* 2 item per baris pada tablet */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sertifikat-item {
-    flex: 1 1 calc(100% - 20px); /* 1 item per baris pada layar kecil */
-    padding: 15px; /* Kurangi padding */
-  }
-
-  .sertifikat-container {
-    gap: 10px; /* Kurangi jarak antar item */
-  }
-
-  .sertifikat-item h3 {
-    font-size: 1.1em; /* Kurangi ukuran font judul */
-  }
-
-  .sertifikat-item p {
-    font-size: 0.85em; /* Kurangi ukuran font deskripsi */
-  }
-}
-
 
 /*=============== FORM ===============*/
 

@@ -78,45 +78,6 @@ h2 {
   height: 100vh;
 }
 
-/*=============== CONTACT INFO ===============*/
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Pastikan body memiliki minimal tinggi viewport */
-}
-
-#content {
-  flex: 1; /* Memungkinkan konten untuk mengambil ruang yang tersisa */
-}
-
-#contact-info {
-  text-align: center;
-  padding: 20px; /* Padding yang cukup untuk kenyamanan */
-  background-color: #f1f1f1; /* Warna latar belakang */
-  border-top: 1px solid #ddd; /* Tambahkan garis atas untuk pemisahan */
-  font-size: 1em; /* Ukuran font default */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  #contact-info {
-    font-size: 0.9em; /* Kurangi ukuran font pada layar lebih kecil */
-    padding: 15px; /* Kurangi padding */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #contact-info {
-    font-size: 0.85em; /* Ukuran font lebih kecil untuk layar sangat kecil */
-    padding: 10px; /* Kurangi padding lebih jauh */
-  }
-}
-
-
 /*=============== MENU ===============*/
 
 .menu {
