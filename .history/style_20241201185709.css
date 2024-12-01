@@ -711,8 +711,7 @@ img.modal-image {
   padding: 20px; /* Padding untuk item */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
   flex: 1 1 calc(30% - 20px); /* Ukuran fleksibel, 3 item per baris dengan margin */
-  min-width: 650px; /* Lebar minimum untuk memastikan fleksibilitas */
-  max-width: 650px; /* Lebar maksimum untuk item */
+  
   height: auto; /* Tinggi fleksibel agar isi tidak terpotong */
   display: flex; /* Menggunakan flexbox di dalam item */
   flex-direction: column; /* Mengatur arah konten vertikal */
@@ -736,8 +735,8 @@ img.modal-image {
 @media screen and (max-width: 1024px) {
   .sertifikat-item {
     flex: 1 1 calc(45% - 20px); /* 2 item per baris pada tablet */
-    min-width: 250px; /* Lebar minimum lebih kecil */
-    max-width: 250px; /* Menjaga lebar maksimum */
+    min-width: 650px; /* Lebar minimum untuk memastikan fleksibilitas */
+    max-width: 650px; /* Lebar maksimum untuk item */
   }
 }
 
@@ -745,8 +744,8 @@ img.modal-image {
   .sertifikat-item {
     flex: 1 1 calc(100% - 20px); /* 1 item per baris pada layar kecil */
     padding: 15px; /* Kurangi padding */
-    min-width: 250px; /* Lebar minimum lebih kecil */
-    max-width: 250px; /* Menjaga lebar maksimum */
+    min-width: 450px; /* Lebar minimum untuk memastikan fleksibilitas */
+    max-width: 450px; /* Lebar maksimum untuk item */
   }
 
   .sertifikat-container {

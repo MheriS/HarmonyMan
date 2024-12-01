@@ -736,8 +736,6 @@ img.modal-image {
 @media screen and (max-width: 1024px) {
   .sertifikat-item {
     flex: 1 1 calc(45% - 20px); /* 2 item per baris pada tablet */
-    min-width: 250px; /* Lebar minimum lebih kecil */
-    max-width: 250px; /* Menjaga lebar maksimum */
   }
 }
 
@@ -745,8 +743,6 @@ img.modal-image {
   .sertifikat-item {
     flex: 1 1 calc(100% - 20px); /* 1 item per baris pada layar kecil */
     padding: 15px; /* Kurangi padding */
-    min-width: 250px; /* Lebar minimum lebih kecil */
-    max-width: 250px; /* Menjaga lebar maksimum */
   }
 
   .sertifikat-container {
