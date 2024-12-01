@@ -384,6 +384,9 @@ body {
 
 .project-list {
   margin: 20px 0;
+  display: grid; /* Gunakan grid untuk tata letak yang fleksibel */
+  gap: 20px; /* Jarak antar item */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Atur responsif grid */
 }
 
 .project-tile {
@@ -398,6 +401,12 @@ body {
   margin: auto;
   overflow: hidden;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Menambahkan sudut melengkung */
+  transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.project-tile:hover {
+  transform: scale(1.05); /* Sedikit membesar saat hover */
 }
 
 .project-tile img {
@@ -433,38 +442,31 @@ body {
   max-width: 250px;
   margin: 20px;
   position: absolute;
-  left: 50%; /* Menempatkan deskripsi di tengah secara horizontal */
-  transform: translateX(-50%); /* Mengoreksi posisi agar tepat di tengah */
-  background-color: rgba(0, 0, 0, 0.6); /* Menambahkan latar belakang semi-transparan untuk teks */
+  left: 50%;
+  transform: translateX(-50%); /* Menempatkan di tengah secara horizontal */
+  background-color: rgba(0, 0, 0, 0.6); /* Latar belakang semi-transparan */
   color: white;
-  opacity: 0; /* Mulai tersembunyi */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Menambahkan transisi halus */
+  opacity: 0; /* Tersembunyi secara default */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi saat hover */
 }
 
 .project-tile:hover .project-description {
-  opacity: 1; /* Menampilkan deskripsi saat hover */
-  left: 40%;
-  transform: translateX(-50%, -50%) translateY(0%); /* Sedikit mengangkat deskripsi */
-  padding: 10px; /* Menambah ruang di sekitar teks saat hover */
-  width: 90%; /* Lebar deskripsi saat hover */
+  opacity: 1; /* Tampilkan deskripsi saat hover */
+  transform: translateX(-50%) translateY(0%);
+  padding: 15px;
+  width: 90%;
 }
 
-/* Teks deskripsi */
 .project-description p {
-  font-size: 1.1em; /* Ukuran teks default */
-  line-height: 1.0; /* Spasi antar baris */
+  font-size: 1em; /* Ukuran font default */
+  line-height: 1.4; /* Spasi antar baris */
   color: #fff;
   font-family: Arial, sans-serif;
-  transition: font-size 0.3s ease-in-out; /* Animasi perubahan ukuran font */
+  transition: font-size 0.3s ease-in-out; /* Animasi ukuran font */
 }
 
 .project-tile:hover .project-description p {
-  font-size: 1.0em; /* Ukuran font lebih besar saat hover */
-  text-align: justify; /* Meratakan teks ke kiri dan kanan */
-  hyphens: auto; /* Menambahkan pemenggalan otomatis pada kata panjang */
-  /* word-spacing: 2px; Mengatur jarak antar kata */
-  /* text-justify: inter-word; Menjaga jarak antar kata agar tidak terlalu jauh */
-  /* word-spacing: normal; Mengatur jarak antar kata */
+  font-size: 1.1em; /* Perbesar ukuran font saat hover */
 }
 
 .project-tile:hover .overlay {
@@ -474,64 +476,36 @@ body {
   transition: 0.5s ease;
 }
 
-/* Styling untuk modal ketika di klik*/
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .project-description {
+    max-width: 200px; /* Kurangi lebar deskripsi */
+    padding: 8px; /* Kurangi padding */
+  }
 
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan untuk modal */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  .project-description p {
+    font-size: 0.9em; /* Ukuran font lebih kecil untuk layar kecil */
+  }
+
+  .project-tile {
+    height: 250px; /* Kurangi tinggi proyek untuk layar lebih kecil */
+  }
 }
 
-/* Konten modal */
-.modal-content {
-  position: relative;
-  background-color: #fff;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-  border-radius: 8px;
-}
+@media screen and (max-width: 480px) {
+  .project-tile {
+    height: 200px; /* Kurangi lebih lanjut untuk layar kecil */
+  }
 
-.close-btn, .prev-btn, .next-btn {
-  font-size: 24px;
-  color: #333;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  .project-description {
+    max-width: 180px;
+    padding: 6px;
+  }
 
-.close-btn {
-  top: 10px;
-  right: 20px;
-  font-size: 30px;
-  color: #fff;
+  .project-description p {
+    font-size: 0.8em;
+  }
 }
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-/* Gambar modal */
-img.modal-image {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-}
-
 
 /*=============== EDUCATION SECTION ===============*/
 #education {
@@ -711,7 +685,7 @@ img.modal-image {
   padding: 20px; /* Padding untuk item */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
   flex: 1 1 calc(30% - 20px); /* Ukuran fleksibel, 3 item per baris dengan margin */
-  min-width: 650px; /* Lebar minimum untuk memastikan fleksibilitas */
+  min-width: 200px; /* Lebar minimum untuk memastikan fleksibilitas */
   max-width: 650px; /* Lebar maksimum untuk item */
   height: auto; /* Tinggi fleksibel agar isi tidak terpotong */
   display: flex; /* Menggunakan flexbox di dalam item */

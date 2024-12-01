@@ -711,7 +711,7 @@ img.modal-image {
   padding: 20px; /* Padding untuk item */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
   flex: 1 1 calc(30% - 20px); /* Ukuran fleksibel, 3 item per baris dengan margin */
-  min-width: 650px; /* Lebar minimum untuk memastikan fleksibilitas */
+  min-width: 200px; /* Lebar minimum untuk memastikan fleksibilitas */
   max-width: 650px; /* Lebar maksimum untuk item */
   height: auto; /* Tinggi fleksibel agar isi tidak terpotong */
   display: flex; /* Menggunakan flexbox di dalam item */
