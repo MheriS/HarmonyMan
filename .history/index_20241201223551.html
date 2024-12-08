@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Photography Landing Page using HTML CSS and JavaScript - Coding Torque</title>
+</head>
+
+<body>
+
+    <div id="contact-info">
+        <p>Hubungi saya di: <a href="https://wa.me/082131505173" target="_blank">WhatsApp</a> | <a href="mailto:heribangkal21@gmail.com">Email</a></p>
+    </div>
+
+    <!-- Further code here -->
+    <nav id="navbar" class="navbar"><a href="#"></a></nav>
+
+    <div class="container">
+        <!--=============== NAVIGATION MENU ===============-->
+
+        <!-- Logo diambil dari font awesome -->
+        <div class="menu" style="border-radius: 0 !important;">
+            <a href="#welcome-section" class="menu-icon fas fa-home"></a>
+            <a href="#about" class="menu-icon fas fa-user"></a>
+            <a href="#projects" class="menu-icon fas fa-code"></a>
+            <a href="#education" class="menu-icon fas fa-graduation-cap"></a>
+            <a href="#leadership" class="menu-icon fas fa-user-tie"></a>
+            <a href="#experience" class="menu-icon fas fa-briefcase"></a>
+            <a href="#sertifikat" class="menu-icon fas fa-certificate"></a>
+            <!-- <a href="#contact" class="menu-icon fas fa-envelope"></a> -->
+        </div>
+
+        <!--=============== MAIN "WINDOW" ===============-->
+
+        <div class="portfolio">
+            <!--=============== HEADER SECTION ===============-->
+
+            <section class="header">
+                <!-- <img class="header-img"
+                    src="https://images.pexels.com/photos/2389349/pexels-photo-2389349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" /> -->
+                <div class="gradient-border">
+                    <h1>Open To Work</h1>
+                </div>
+                <h1 class="typing" style="font-size: 24px;" display: inline-block;>Moh. Heri Susanto</h1>
+                <h2 class="custom-heading">Artificial Intelligent Engineer, WEB Developer</h2>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/harmonyman/" target="_blank" class="fab fa-linkedin-in" id="profile-link" data-tooltip="LinkedIn"></a>
+                    <a href="https://github.com/MheriS" target="_blank" class="fab fa-github" data-tooltip="GitHub"></a>
+                    <a href="https://www.instagram.com/harmonyman21/" target="_blank" class="fab fa-instagram" data-tooltip="Instagram"></a>
+                </div>
+                <!-- <div class="header">
+                    <button href="https://drive.google.com/file/d/1GomKwKvo-YvHG39TWRtdMy3kjO0zu0Jp/view?usp=sharing" class="cta">Download CV</button>
+                </div> -->
+                <div class="header">
+                    <button class="cta" onclick="window.open('https://drive.google.com/file/d/1GomKwKvo-YvHG39TWRtdMy3kjO0zu0Jp/view?usp=sharing', '_blank')">Download CV</button>
+                </div>
+                <!-- <a href="" class="cta">Download CV</a> -->
+            </section>
+
+            <!--=============== CONTENT SECTION ===============-->
+
+            <div class="content">
+                <!--=============== HOME ===============-->
+
+                <section class="content-card home" id="welcome-section">
+                    <h1>Halo, Saya Moh. Heri Susanto</h1>
+                </section>
+
+                <!--=============== ABOUT ME ===============-->
+                <section class="content-card about" id="about">
+                    <h1>Tentang Saya</h1>
+                    <div class="about-item about-me">
+                        <p>
+                            Mendalami di bidang teknologi dan kecerdasaran buatan (AI). Dengan pengalaman dalam pengembangan sistem berbasis K-NN (K-Nearest Neighbors) dan CNN (Convolutional Neural Network) untuk klasifikasi citra, serta Naive Bayes (NB) dan Large Language Model (LLM) untuk analisis sentimen. Mampu membuat model secara manual tanpa menggunakan library model dalam penelitian menggunakan metode K-NN dan CNN dengan bahasa Python. Mencari peran yang menantang untuk mengembangkan penelitian dengan bidang AI. Dan selalu bersemangat untuk mempelajari hal yang baru serta bekerja secara individual juga senang apabila bekerja secara kolaboratif untuk memecahkan masalah teknologi.
+                        </p>
+                    </div>
+                    <!-- Jika col 2 maka kanan kiri karena col 12 maka atas bawah-->
+                    <div class="col-12">
+                        <div class="about-item skills">
+                            <h1>Skill</h1>
+                            <span class="skill"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="skill"><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span class="skill"><i class="fab fa-js-square"></i> JavaScript</span>
+                            <span class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                            <span class="skill"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill"><i class="fab fa-jupyter"></i> Jupyter</span>
+                            <span class="skill"><i class="fab fa-java"></i> Java</span>
+                            <span class="skill"><i class="fas fa-database"></i> SQL</span>
+                            <span class="skill"><i class="fab fa-git"></i> GIT</span>
+                            <span class="skill"><i class="fas fa-plug"></i> API</span>
+                            <span class="skill"><i class="fas fa-file-excel"></i> Ms. Excel</span>
+                            <span class="skill"><i class="fas fa-file-powerpoint"></i> Ms. PowerPoint</span>
+                            <span class="skill"><i class="fas fa-file-word"></i> Ms. Word</span>
+                            <span class="skill"><i class="fab fa-adobe"></i> Adobe Photoshop</span>
+                            <span class="skill"><i class="fab fa-figma"></i> Figma</span>
+                            <span class="skill"><i class="fab fa-canva"></i> Canva</span>
+                            <span class="skill"><i class="fas fa-server"></i> XAMPP</span>
+                            <span class="skill"><i class="fas fa-cogs"></i> Laragon</span>
+                            <span class="skill"><i class="fab fa-blender"></i> 3D Blender</span>
+                        </div>
+
+                        <div class="about-item languages">
+                            <h1>Bahasa</h1>
+                            <div class="language">
+                                <p>Indonesian</p>
+                                <span class="bar"><span class="indonesian"></span></span>
+                            </div>
+                            <div class="language">
+                                <p>English</p>
+                                <span class="bar"><span class="english"></span></span>
+                            </div>
+                            <div class="language">
+                                <p>Madura</p>
+                                <span class="bar"><span class="madura"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--=============== PROJECTS ===============-->
+                <section class="content-card projects" id="projects">
+                    <h1>Proyek</h1>
+                    <div class="col-2 project-list">
+                        <!-- Project Tile 1 -->
+                        <div class="project-tile" onclick="openModal(0)">
+                            <img src="https://i.ibb.co.com/9WSrsDR/Kalsifikasi-Penyakit-Padi.png" alt="Project 1 Image" border="0">
+                            <div class="overlay">
+                                <div class="project-description">
+                                    <h3>Klasifikasi Penyakit Padi</h3>
+                                    <p>
+                                        Model yang sudah dilatih menggunakan CNN manual (numpy) tanpa menggunakan library model seperti keras.tensorflow. Kinerja model CNN sangat baik sehingga dapat mengklasifikasikan penyakit padi dengan akurasi test ACCR = 0.964789. Untuk program belum saya publish karena bersifat privat karena proses skripsi. Akan tetapi sudah pernah ditunjukkan kepada dosen-dosen.
+                                        <br>
+                                        <a href="https://github.com/MheriS?tab=repositories" target="_blank">Lihat di GitHub</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Tile 2 -->
+                        <div class="project-tile" onclick="openModal(1)">
+                            <img src="https://i.ibb.co.com/QvHLxhw/Klasifikasi-Keris1.png" alt="Project 2 Image" border="0">
+                            <div class="overlay">
+                                <div class="project-description">
+                                    <h3>Klasifikasi Keris Menggunakan KNN</h3>
+                                    <p>
+                                        Sebagai media pembelajaran bagi pelajar atau generasi penerus. Dengan melakukan pengenalan diharap dapat membantu generasi muda agar budaya tidak hilang. Model juga dibuat secara manual dengan numpy.
+                                    </p>
+                                    <br>
+                                    <a href="https://github.com/MheriS/IdentifikasiJenisAsalKeris" target="_blank">Lihat di GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Tile 3 -->
+                        <div class="project-tile" onclick="openModal(2)">
+                            <img src="https://i.ibb.co.com/NjmSj1Y/LLMHugging-Face.png" alt="Project 3 Image" border="0">
+                            <div class="overlay">
+                                <div class="project-description">
+                                    <h3>Analisis Sentimen Dengan LLM pada HuggingFace</h3>
+                                    <p>
+                                        Menggunakan model LLM yang sudah dilatih dan tersedia di HuggingFace dengan cara menggunakan API. Dan melakukan desain yang tepat untuk analisis sentimen dengan menggunakan flask.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Tile 4 -->
+                        <div class="project-tile" onclick="openModal(3)">
+                            <img src="https://i.ibb.co.com/QXyHW4k/loading.jpg" alt="loading" border="2">
+                            <div class="overlay">
+                                <div class="project-description">
+                                    <h3>Project 4</h3>
+                                    <p>
+                                        None
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Tile 5 -->
+                        <div class="project-tile" onclick="openModal(4)">
+                            <img src="https://i.ibb.co.com/QXyHW4k/loading.jpg" alt="loading" border="2">
+                            <div class="overlay">
+                                <div class="project-description">
+                                    <h3>Project 5</h3>
+                                    <p>
+                                        None
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Tile 6 -->
+                        <div class="project-tile" onclick="openModal(5)">
+                            <img src="https://i.ibb.co.com/QXyHW4k/loading.jpg" alt="loading" border="2">
+                            <div class="overlay">
+                                <div class="project-description">
+                                    <h3>Project 6</h3>
+                                    <p>
+                                        None
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal untuk galeri album -->
+                        <div id="albumModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeModal()">&times;</span> <!-- Tombol untuk menutup modal -->
+                                <span class="prev-btn" onclick="changeSlide(-1)">&#10094;</span> <!-- Tombol untuk ke gambar sebelumnya -->
+                                <span class="next-btn" onclick="changeSlide(1)">&#10095;</span> <!-- Tombol untuk ke gambar selanjutnya -->
+                                <img id="modalImage" class="modal-image" src="" alt="Album Image"> <!-- Gambar utama modal yang berubah saat navigasi -->
+                                <p id="caption"></p> <!-- Keterangan gambar yang berubah saat navigasi -->
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/MheriS">see more...</a>
+                </section>
+
+                <!-- EDUCATION -->
+                <section class="content-card education" id="education">
+                    <h1>Riwayat Pendidikan</h1>
+                    <div class="education-item">
+                        <h3><i class="fas fa-graduation-cap"></i> Universitas Islam Negeri Maulana Malik Ibrahim Malang</h3>
+                        <p><strong>Gelar:</strong> Sarjana Teknik Informatika</p>
+                        <p><strong>Tahun:</strong> 2020 - Sekarang</p>
+                        <p><strong>Deskripsi:</strong> Mempelajari berbagai aspek teknik komputer dan pemrograman.</p>
+                    </div>
+                    <div class="education-item">
+                        <h3><i class="fas fa-graduation-cap"></i> SMA Negeri 2 Sumenep</h3>
+                        <p><strong>Jurusan:</strong> IPA</p>
+                        <p><strong>Tahun:</strong> 2017 - 2019</p>
+                        <p><strong>Deskripsi:</strong> Fokus pada mata pelajaran sains dan matematika.</p>
+                    </div>
+                </section>
+
+                <!--=============== LEADERSHIP ACTIVITIES ===============-->
+
+                <section class="content-card leadership" id="leadership">
+                    <h1>Aktivitas Kepemimpinan</h1>
+                    <div class="leadership-item">
+                        <h3><i class="fas fa-user-tie"></i> Ketua Media Informasi FKMS UIN Maliki Malang</h3>
+                        <p><strong>Periode:</strong> 2022 - 2023</p>
+                        <p><strong>Deskripsi:</strong> Bertanggung jawab dalam pengelolaan media informasi, melakukan publikasi kegiatan secara up to date, memimpin proses desain konten digital untuk publikasi.</p>
+                    </div>
+                    <!-- <div class="leadership-item">
+                        <h3><i class="fas fa-user-tie"></i> Koordinator Kegiatan Sosial</h3>
+                        <p><strong>Periode:</strong> 2020 - Sekarang</p>
+                        <p><strong>Deskripsi:</strong> Mengorganisir kegiatan sosial untuk mahasiswa di Universitas Islam Negeri Maulana Malik Ibrahim Malang, termasuk penggalangan dana dan kegiatan bakti sosial.</p>
+                    </div> -->
+                </section>
+
+                <!--=============== EXPERIENCE ===============-->
+
+                <section class="content-card experience" id="experience">
+                    <h1>Pengalaman</h1>
+                    <div class="timeline">
+                        <div class="timeline-items">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jun 2023 – Agu 2023</div>
+                                <div class="timeline-content">
+                                    <h3><span style="font-weight: bold;">PT. Arion Indonesia, </span>Malang</h3>
+                                    <p><em>Agricultural Data Analyst</em></p>
+                                    <br>
+                                    <ul>
+                                        <li>Menggunakan API dari platform media sosial dan berita online untuk mengumpulkan data teks berupa sentimen terhadap tokoh masyarakat Cak Nun.</li>
+                                        <li>Melakukan pemprosesan teks agar dapat diolah untuk analisis sentimen.</li>
+                                        <li>Melatih model untuk mengklasifikasikan data netral, positif dan negatif.</li>
+                                        <li>Menguji model dengan data uji yang dihasilkan dari data API.</li>
+                                        <li>Melakukan koreksi manual (dengan cara melabelkan prediksi yang salah menjadi yang sesungguhnya pada hasil prediksi berformat Ms. Excel).</li>
+                                        <li>Pelaporan hasil analisis sentimen.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jun 2023 – Agu 2023</div>
+                                <div class="timeline-content">
+                                    <h3><span style="font-weight: bold;">PT. Arion Indonesia, </span>Malang</h3>
+                                    <p><em>Agricultural Data Analyst</em></p>
+                                    <br>
+                                    <ul>
+                                        <li>Mampu mengendalikan drone terhadap area target, untuk mengambil foto dari berbagai sudut dan sisi.</li>
+                                        <li>Melakukan pemprosesan dan rendering gambar menjadi peta 3D.</li>
+                                        <li>Memetakan kondisi tanah dan area yang memerlukan tindakan perbaikan dan pemeliharaan lebih lanjut menggunakan website GIS perusahaan.</li>
+                                        <li>Melakukan pemantauan kesuburan tanah berdasarkan data visual yang memungkinkan kita untuk memahami kondisi lahan secara lebih mudah dan cepat.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2022</div>
+                                <div class="timeline-content">
+                                    <h3><span style="font-weight: bold;">Dinas Pekerjaan Umum Bina Marga, </span>Sumenep</h3>
+                                    <p><em>Data Entry</em></p>
+                                    <br>
+                                    <ul>
+                                        <li>Membuat laporan keuangan organisasi Dharmawanita berbasi Ms. Excel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--=============== SERTIFIKAT ===============-->
+
+                <section id="sertifikat" class="content-card section">
+                    <h1>Sertifikat</h1>
+                    <div class="sertifikat-item">
+                        <h3>Alibaba Cloud: Big Data Fundamentals Professional Academy Digital Talent Scholarship 2023</h3>
+                        <p>Institusi: KOMINFO, digitalent, Alibaba Cloud</p>
+                        <p>Tanggal: September 2023</p>
+                        <p>Deskripsi: Sertifikat ini diberikan setelah menyelesaikan pelatihan dan dinyatakan lulus.</p>
+                    </div>
+                    <div class="sertifikat-item">
+                        <h3>Cloud Practioner Essential</h3>
+                        <p>Institusi: Dicoding Indonesia</p>
+                        <p>Tanggal: Mei 2023</p>
+                        <p>Deskripsi: Sertifikat ini diberikan setelah menyelesaikan kursus.</p>
+                    </div>
+                    <div class="sertifikat-item">
+                        <h3>Data Science Methodology</h3>
+                        <p>Institusi: Cognitiv Class</p>
+                        <p>Tanggal: April 2023</p>
+                        <p>Deskripsi: Sertifikat ini diberikan setelah menyelesaikan kursus.</p>
+                    </div>
+                    <div class="sertifikat-item">
+                        <h3>Machine Learning With Python</h3>
+                        <p>Institusi: Cognitiv Class</p>
+                        <p>Tanggal: Maret 2023</p>
+                        <p>Deskripsi: Sertifikat ini diberikan setelah menyelesaikan kursus.</p>
+                    </div>
+                    <div class="sertifikat-item">
+                        <h3>Python 101 For Data Science</h3>
+                        <p>Institusi: Cognitiv Class</p>
+                        <p>Tanggal: Februari 2023</p>
+                        <p>Deskripsi: Sertifikat ini diberikan setelah menyelesaikan kursus.</p>
+                    </div>
+                </section>
+
+                <!--=============== CONTACT ===============-->
+
+                <!-- <section class="content-card contact" id="contact">
+                    <h1>Contact</h1>
+                    <form class="form" id="form" action="http://localhost:3000/send-email">
+                        <div class="input-box">
+                            <input type="text" class="text-input" name="name" placeholder="Name" required/>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" class="text-input" name="email" id="email" placeholder="Email" required/>
+                        </div>
+                        <div class="input-box">
+                            <input type="subject" class="text-input" name="subject" id="subject"
+                                placeholder="Subject" required/>
+                        </div>
+                        <div class="input-box">
+                            <textarea name="text" class="message" placeholder="Message..." required></textarea>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" class="submit-btn" id="submit" value="submit" />
+                        </div>
+                    </form>
+                </section> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projectImages = [
+            [
+                { src: "https://i.ibb.co.com/9WSrsDR/Kalsifikasi-Penyakit-Padi.png", caption: "Project 1 - Image 1" },
+                { src: "https://i.ibb.co.com/m0F019d/Kalsifikasi-Penyakit-Padi1.png", caption: "Project 1 - Image 2" },
+                { src: "https://i.ibb.co.com/WnHh1SV/Kalsifikasi-Penyakit-Padi2.png", caption: "Project 1 - Image 3" },
+                { src: "https://i.ibb.co.com/bshY4VB/Klasifikasi-Penyakit-Padi3.png", caption: "Project 1 - Image 4" },
+                { src: "https://i.ibb.co.com/k5tzqDp/Klasifikasi-Penyakit-Padi4.png", caption: "Project 1 - Image 5" },
+            ],
+            [
+                { src: "https://i.ibb.co.com/vLr4RfF/Klasifikasi-Keris2.png", caption: "Project 2 - Image 1" },
+                { src: "https://i.ibb.co.com/QvHLxhw/Klasifikasi-Keris1.png", caption: "Project 2 - Image 2" }
+            ],
+            [
+                { src: "https://i.ibb.co.com/KNsK6Jd/LLMHugging-Face2.png", caption: "Project 3 - Image 1" },
+                { src: "https://i.ibb.co.com/NjmSj1Y/LLMHugging-Face.png", caption: "Project 3 - Image 2" },
+                { src: "https://i.ibb.co.com/n0bzWNm/LLMHugging-Face1.png", caption: "Project 3 - Image 3" },
+            ],
+            [
+                { src: "https://i.ibb.com/kXvSQ7Y/Kalsifikasi-Penyakit-Padi.png", caption: "Project 4 - Image 1" },
+                { src: "https://i.ibb.com/kXvSQ7Y/Kalsifikasi-Penyakit-Padi.png", caption: "Project 4 - Image 2" }
+            ]
+        ];
+    
+        let currentProject = 0;
+        let currentSlide = 0;
+    
+        function openModal(projectIndex) {
+            currentProject = projectIndex;
+            currentSlide = 0;
+            document.getElementById("albumModal").style.display = "flex";
+            showSlide(currentSlide);
+        }
+    
+        function closeModal() {
+            document.getElementById("albumModal").style.display = "none";
+        }
+    
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= projectImages[currentProject].length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = projectImages[currentProject].length - 1;
+            showSlide(currentSlide);
+        }
+    
+        function showSlide(index) {
+            const imageElement = document.getElementById("modalImage");
+            const captionElement = document.getElementById("caption");
+            const imageData = projectImages[currentProject][index];
+            imageElement.src = imageData.src;
+            captionElement.textContent = imageData.caption;
+        }
+    
+        // Menutup modal saat 'Escape' ditekan
+        window.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    
+        // Menutup modal jika klik di luar modal-content
+        window.addEventListener("click", (event) => {
+            const modal = document.getElementById("albumModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        //Contact
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form dari pengiriman default
+        
+            // Mengambil data dari form
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const subject = document.querySelector('input[name="subject"]').value;
+            const text = document.querySelector('textarea[name="text"]').value;
+        
+            // Mengirim data ke server
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    text: text
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+                console.log('Success:', data);
+                alert('Email sent successfully!');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error sending the email.');
+            });
+        });
+    </script>
+</body>
+
+</html>
